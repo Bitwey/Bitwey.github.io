@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="index, follow" name="robots"/>
+  <title>
+   Bitway: Capital Gateway Connecting On-Chain Liquidity with Global Markets
+  </title>
+  <meta content="Bitway is an Internet Capital Gateway connecting onchain liquidity with global opportunities through blockchain infrastructure, yield strategies, Bitcoin finance, lending, payments, and the BTW token ecosystem." name="description"/>
+  <style>
+   * {
+    box-sizing:border-box;
+    margin:0;
+    padding:0
+}
+
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f8fc;
+    color:#172033;
+    line-height:1.7
+}
+
+.container {
+    width:92%;
+    max-width:1200px;
+    margin:auto
+}
+
+header {
+    background:#0d1117;
+    color:#fff;
+    padding:18px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 18px rgba(0,0,0,.16)
+}
+
+.header-inner {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px
+}
+
+.brand {
+    display:flex;
+    align-items:center;
+    gap:12px
+}
+
+.brand img {
+    width:44px;
+    height:44px;
+    object-fit:contain;
+    border-radius:10px
+}
+
+.brand-name {
+    font-size:23px;
+    font-weight:700
+}
+
+nav {
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap
+}
+
+nav a {
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none
+}
+
+nav a:hover {
+    color:#66d9ff
+}
+
+.hero-image {
+    width:100%;
+    background:#fff
+}
+
+.hero-image img {
+    width:100%;
+    height:auto;
+    max-height:650px;
+    object-fit:cover;
+    display:block
+}
+
+main {
+    padding:50px 0
+}
+
+.intro-card,.section {
+    background:#fff;
+    border:1px solid #e1e8f0;
+    box-shadow:0 7px 28px rgba(13,17,23,.07)
+}
+
+.intro-card {
+    border-radius:18px;
+    padding:40px;
+    margin-bottom:35px
+}
+
+.logo-box {
+    text-align:center;
+    margin-bottom:25px
+}
+
+.logo-box img {
+    width:120px;
+    height:120px;
+    object-fit:contain;
+    border-radius:20px
+}
+
+h1 {
+    color:#0d1117;
+    font-size:38px;
+    line-height:1.25;
+    margin-bottom:20px;
+    text-align:center
+}
+
+h2 {
+    color:#0d1117;
+    font-size:28px;
+    line-height:1.3;
+    margin-bottom:18px
+}
+
+h3 {
+    color:#087ea4;
+    font-size:21px;
+    margin-bottom:12px
+}
+
+p {
+    font-size:16px;
+    color:#536174;
+    margin-bottom:18px
+}
+
+.lead {
+    font-size:18px;
+    text-align:center;
+    max-width:950px;
+    margin:auto;
+    color:#536174
+}
+
+.section {
+    padding:35px;
+    margin-bottom:30px;
+    border-radius:16px;
+    border-left:5px solid #13a8d8
+}
+
+.section ul {
+    padding-left:25px;
+    margin-bottom:15px
+}
+
+.section li {
+    color:#536174;
+    margin-bottom:10px;
+    font-size:16px
+}
+
+.feature-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-top:25px
+}
+
+.feature-card {
+    background:#f5f8fc;
+    border:1px solid #dce5ee;
+    border-radius:14px;
+    padding:25px
+}
+
+.feature-card p {
+    margin-bottom:0
+}
+
+.token-box {
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-top:25px
+}
+
+.token-item {
+    background:#f5f8fc;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid #dce5ee
+}
+
+.token-item strong {
+    display:block;
+    color:#0d1117;
+    margin-bottom:5px
+}
+
+.token-item span {
+    color:#536174
+}
+
+.faq-item {
+    background:#f5f8fc;
+    border:1px solid #dce5ee;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px
+}
+
+.faq-item h3 {
+    color:#0d1117;
+    margin-bottom:8px
+}
+
+.faq-item p {
+    margin-bottom:0
+}
+
+footer {
+    background:#0d1117;
+    color:#fff;
+    padding:30px 0;
+    text-align:center
+}
+
+footer p {
+    color:#cbd5e1;
+    margin:0;
+    font-size:14px
+}
+
+@media(max-width:900px) {
+    .feature-grid {
+        grid-template-columns:1fr 1fr
+    }
+
+    h1 {
+        font-size:32px
+    }
+
+    h2 {
+        font-size:25px
+    }
+}
+
+@media(max-width:650px) {
+    header {
+        position:relative
+    }
+
+    .header-inner {
+        flex-direction:column;
+        text-align:center
+    }
+
+    nav {
+        justify-content:center;
+        gap:15px
+    }
+
+    .hero-image img {
+        max-height:none
+    }
+
+    main {
+        padding:30px 0
+    }
+
+    .intro-card,.section {
+        padding:25px 20px
+    }
+
+    .feature-grid,.token-box {
+        grid-template-columns:1fr
+    }
+
+    h1 {
+        font-size:28px
+    }
+
+    h2 {
+        font-size:23px
+    }
+
+    p,.section li {
+        font-size:15px
+    }
+}
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="container header-inner">
+    <div class="brand">
+     <img alt="images (5).png" src="images (5).png"/>
+     <div class="brand-name">
+      Bitway
+     </div>
+    </div>
+    <nav>
+     <a href="#overview">
+      Overview
+     </a>
+     <a href="#features">
+      Features
+     </a>
+     <a href="#earn">
+      Bitway Earn
+     </a>
+     <a href="#bitcoin">
+      Bitcoin
+     </a>
+     <a href="#token">
+      BTW Token
+     </a>
+     <a href="#faq">
+      FAQ
+     </a>
+    </nav>
+   </div>
+  </header>
+  <section class="hero-image">
+   <img alt="Bitway.png" src="Bitway.png"/>
+  </section>
+  <main>
+   <div class="container">
+    <section class="intro-card" id="overview">
+     <div class="logo-box">
+      <img alt="images (5).png" src="images (5).png"/>
+     </div>
+     <h1>
+      Bitway: Internet Capital Gateway Connecting Onchain Liquidity With Global Opportunities
+     </h1>
+     <p class="lead">
+      Bitway is an onchain strategy infrastructure designed to connect digital capital with transparent, risk-managed opportunities across decentralized and traditional financial markets.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      What Is Bitway?
+     </h2>
+     <p>
+      Bitway describes itself as an Internet Capital Gateway designed to connect onchain capital with global opportunities.
+     </p>
+     <p>
+      Its infrastructure is focused on connecting decentralized liquidity with financial strategies while combining onchain transparency with offchain execution.
+     </p>
+     <p>
+      The broader ecosystem includes yield products, Bitcoin infrastructure, lending, payments, token utilities, and blockchain-based financial applications.
+     </p>
+    </section>
+    <section class="section" id="features">
+     <h2>
+      Bitway Ecosystem
+     </h2>
+     <p>
+      Bitway brings several products and infrastructure components together within its broader onchain capital ecosystem.
+     </p>
+     <div class="feature-grid">
+      <div class="feature-card">
+       <h3>
+        Bitway Earn
+       </h3>
+       <p>
+        A yield-focused product designed to provide access to market-neutral strategies through staking vault infrastructure.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Bitcoin Ledger
+       </h3>
+       <p>
+        A Bitcoin-compatible Layer 1 blockchain designed for the Bitway ecosystem and its onchain financial infrastructure.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Bitcoin Bridge
+       </h3>
+       <p>
+        Bridge infrastructure designed around Bitcoin connectivity and validator-operated network functionality.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Bitcoin Lending
+       </h3>
+       <p>
+        Native Bitcoin lending infrastructure designed around permissionless onchain financial applications.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Payments
+       </h3>
+       <p>
+        Bitcoin-focused payment infrastructure designed for onchain transfers and digital asset utility.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Onchain Strategies
+       </h3>
+       <p>
+        Strategy infrastructure connecting digital capital with yield-generating and market-focused financial strategies.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="section" id="earn">
+     <h2>
+      Bitway Earn
+     </h2>
+     <p>
+      Bitway Earn is a yield-generating vault product that allows users to deposit supported stablecoins and access market-neutral yield strategies.
+     </p>
+     <p>
+      The documented staking flow uses assets such as USDT or USDC and issues a vault token representing a user's share of the staked assets and associated yield.
+     </p>
+     <p>
+      Deposited assets can be deployed into market-neutral strategies, with generated returns periodically settled back into the staking vault.
+     </p>
+     <div class="feature-grid">
+      <div class="feature-card">
+       <h3>
+        Staking
+       </h3>
+       <p>
+        Users deposit supported assets into the staking vault and receive a corresponding yield-bearing vault token.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Market-Neutral Strategies
+       </h3>
+       <p>
+        Strategies are designed to target returns without relying on a single directional market movement.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Vault Tokens
+       </h3>
+       <p>
+        Vault tokens represent a user's share of underlying deposited assets and accrued yield.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <h2>
+      Bitway Earn Withdrawal Structure
+     </h2>
+     <p>
+      Bitway Earn documents two withdrawal methods for its staking vaults: Normal Unstake and Flash Unstake.
+     </p>
+     <ul>
+      <li>
+       Normal Unstake uses a waiting period before assets can be claimed.
+      </li>
+      <li>
+       Flash Unstake is designed for immediate withdrawal and applies a penalty according to product rules.
+      </li>
+      <li>
+       The withdrawal amount is calculated using the applicable vault-token exchange rate.
+      </li>
+     </ul>
+    </section>
+    <section class="section" id="bitcoin">
+     <h2>
+      Bitcoin Infrastructure
+     </h2>
+     <p>
+      Bitcoin is a central part of Bitway's broader infrastructure. The ecosystem includes a purpose-built Bitcoin-compatible Layer 1, Bitcoin bridge infrastructure, Bitcoin lending, and payment functionality.
+     </p>
+     <p>
+      The goal is to connect Bitcoin-based liquidity with programmable onchain financial applications and broader market opportunities.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitcoin Ledger
+     </h2>
+     <p>
+      Bitway describes Bitcoin Ledger as a purpose-built Layer 1 blockchain designed for the Bitcoin-aligned onchain economy.
+     </p>
+     <p>
+      The network uses Proof-of-Stake infrastructure and supports blockchain operations, ecosystem applications, and the utility of the BTW token.
+     </p>
+     <p>
+      BTW also functions as the native gas asset for transactions and operations on Bitway Ledger.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitcoin Bridge
+     </h2>
+     <p>
+      Bitway includes a Bitcoin bridge based on FROST technology and operated through Bitway validators.
+     </p>
+     <p>
+      The bridge is designed to connect Bitcoin with the broader Bitway ecosystem and support movement of Bitcoin-related value across the network infrastructure.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitcoin Lending
+     </h2>
+     <p>
+      Bitway's ecosystem includes native Bitcoin lending infrastructure designed around non-custodial and permissionless lending concepts.
+     </p>
+     <p>
+      This component is intended to extend Bitcoin utility into onchain financial applications.
+     </p>
+    </section>
+    <section class="section" id="token">
+     <h2>
+      BTW Token
+     </h2>
+     <p>
+      BTW is described as the native utility and governance token of the Bitway ecosystem.
+     </p>
+     <p>
+      The token supports network security, governance, economic incentives, staking, delegation, and ecosystem participation across Bitway's products and infrastructure.
+     </p>
+     <div class="token-box">
+      <div class="token-item">
+       <strong>
+        Token Name
+       </strong>
+       <span>
+        Bitway Token
+       </span>
+      </div>
+      <div class="token-item">
+       <strong>
+        Token Symbol
+       </strong>
+       <span>
+        BTW
+       </span>
+      </div>
+      <div class="token-item">
+       <strong>
+        Token Standard
+       </strong>
+       <span>
+        BEP20 / ERC20
+       </span>
+      </div>
+      <div class="token-item">
+       <strong>
+        Primary Utility
+       </strong>
+       <span>
+        Utility and Governance
+       </span>
+      </div>
+      <div class="token-item">
+       <strong>
+        Network Role
+       </strong>
+       <span>
+        Security, Governance and Incentives
+       </span>
+      </div>
+      <div class="token-item">
+       <strong>
+        Bitway Ledger
+       </strong>
+       <span>
+        Native Gas, Staking and Delegation
+       </span>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <h2>
+      BTW Token Utilities
+     </h2>
+     <div class="feature-grid">
+      <div class="feature-card">
+       <h3>
+        Governance
+       </h3>
+       <p>
+        BTW functions as a governance token and supports voting on protocol and ecosystem decisions.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Staking
+       </h3>
+       <p>
+        BTW can be staked within the ecosystem and is used to support network security.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Delegation
+       </h3>
+       <p>
+        Token holders can participate through delegation as part of Bitway Ledger consensus.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Network Security
+       </h3>
+       <p>
+        Validators stake BTW to participate in consensus and contribute to network security.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Ecosystem Incentives
+       </h3>
+       <p>
+        BTW is used for partner rewards, liquidity incentives, and broader ecosystem participation.
+       </p>
+      </div>
+      <div class="feature-card">
+       <h3>
+        Product Access
+       </h3>
+       <p>
+        Staking BTW may provide access to selected ecosystem products according to applicable program rules.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <h2>
+      Bitway Points and Referral System
+     </h2>
+     <p>
+      Bitway Earn includes a documented BW Points and referral system associated with staking participation.
+     </p>
+     <ul>
+      <li>
+       Users can earn BW Points based on qualifying deposits and staking duration.
+      </li>
+      <li>
+       Referral activity can provide additional BW Points under the applicable program rules.
+      </li>
+      <li>
+       Documentation states that BW Points may later be converted into BTW at a ratio to be announced.
+      </li>
+     </ul>
+    </section>
+    <section class="section">
+     <h2>
+      Onchain Capital Infrastructure
+     </h2>
+     <p>
+      Bitway is designed around connecting onchain liquidity with global financial opportunities.
+     </p>
+     <p>
+      Its infrastructure combines blockchain-based transparency with strategy execution and financial products intended to make digital capital more productive.
+     </p>
+     <p>
+      This approach brings together DeFi-style accessibility and financial strategies that can involve offchain execution.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitway Strategy Infrastructure
+     </h2>
+     <p>
+      Bitway documents strategy infrastructure that can onboard different yield sources and make selected strategies accessible through onchain vaults.
+     </p>
+     <p>
+      Market-neutral strategies are one documented category, with execution designed to reduce dependence on directional market exposure.
+     </p>
+     <p>
+      The underlying strategy infrastructure can involve institutional custodial accounts and exchanges where required for execution, while staking and withdrawal flows remain connected to onchain contracts.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitway Payment Infrastructure
+     </h2>
+     <p>
+      Bitway also provides Bitcoin-focused payment functionality, extending the utility of Bitcoin into onchain transfer use cases.
+     </p>
+     <p>
+      The payment infrastructure is designed around Bitcoin-compatible addresses and digital asset transfers within the Bitway ecosystem.
+     </p>
+    </section>
+    <section class="section">
+     <h2>
+      Bitway Ecosystem Applications
+     </h2>
+     <ul>
+      <li>
+       Onchain yield strategies
+      </li>
+      <li>
+       Bitcoin-compatible Layer 1 infrastructure
+      </li>
+      <li>
+       Bitcoin bridge functionality
+      </li>
+      <li>
+       Native Bitcoin lending
+      </li>
+      <li>
+       Bitcoin payment infrastructure
+      </li>
+      <li>
+       BTW staking and delegation
+      </li>
+      <li>
+       Governance and ecosystem incentives
+      </li>
+      <li>
+       Digital asset and financial infrastructure
+      </li>
+     </ul>
+    </section>
+    <section class="section" id="faq">
+     <h2>
+      Frequently Asked Questions
+     </h2>
+     <div class="faq-item">
+      <h3>
+       What is Bitway?
+      </h3>
+      <p>
+       Bitway is an Internet Capital Gateway focused on connecting onchain liquidity with global financial opportunities.
+      </p>
+     </div>
+     <div class="faq-item">
+      <h3>
+       What is Bitway Earn?
+      </h3>
+      <p>
+       Bitway Earn is a yield-generating vault product that provides access to documented market-neutral strategies through supported staking assets.
+      </p>
+     </div>
+     <div class="faq-item">
+      <h3>
+       What is BTW?
+      </h3>
+      <p>
+       BTW is the native utility and governance token of the Bitway ecosystem.
+      </p>
+     </div>
+     <div class="faq-item">
+      <h3>
+       What is Bitcoin Ledger?
+      </h3>
+      <p>
+       Bitcoin Ledger is Bitway's purpose-built Bitcoin-compatible Layer 1 blockchain and uses BTW within its staking, delegation, security, and gas infrastructure.
+      </p>
+     </div>
+     <div class="faq-item">
+      <h3>
+       What is the Bitway Bitcoin bridge?
+      </h3>
+      <p>
+       It is bridge infrastructure based on FROST technology and operated by Bitway validators to connect Bitcoin with the broader ecosystem.
+      </p>
+     </div>
+     <div class="faq-item">
+      <h3>
+       What can BTW be used for?
+      </h3>
+      <p>
+       BTW supports governance, staking, delegation, network security, ecosystem incentives, selected product access, and native gas functionality on Bitway Ledger.
+      </p>
+     </div>
+    </section>
+    <section class="section">
+     <h2>
+      Conclusion
+     </h2>
+     <p>
+      Bitway combines onchain capital infrastructure with Bitcoin-focused blockchain technology, yield strategies, lending, payments, governance, and ecosystem utilities.
+     </p>
+     <p>
+      Its broader architecture brings together Bitway Earn, Bitcoin Ledger, Bitcoin bridge infrastructure, Bitcoin lending, payment applications, and the BTW token into a connected digital finance ecosystem.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer>
+   <div class="container">
+    <p>
+     &copy; 2026 Bitway. All rights reserved.
+    </p>
+   </div>
+  </footer>
+ </body>
+</html>
